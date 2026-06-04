@@ -7,7 +7,8 @@ import json
 import time
 import os
 
-load_dotenv()
+dotenv_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env')
+load_dotenv(dotenv_path)
 
 KAFKA_SERVER = os.getenv("KAFKA_SERVER")
 KAFKA_TOPIC = os.getenv("KAFKA_TOPIC")
