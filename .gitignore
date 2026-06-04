@@ -1,0 +1,93 @@
+cat > .gitignore << 'EOF'
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+wheels/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# Environment Variables - NEVER commit these
+.env
+*.env
+secrets.py
+config_local.py
+
+# Spark
+spark-warehouse/
+metastore_db/
+derby.log
+*.crc
+
+# Checkpoints - contain offsets and state, machine-specific
+checkpoints/
+/tmp/agg_checkpoint/
+checkpoint/
+
+# Logs
+logs/
+*.log
+spark-*.log
+log4j.properties
+
+# Java / Scala
+*.class
+*.jar
+target/
+.scala_history
+
+# AWS
+.aws/
+aws_credentials
+*.pem
+*.key
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDE
+.idea/
+.vscode/
+*.iml
+.project
+.classpath
+.settings/
+*.swp
+*.swo
+*~
+
+# Data files - don't commit actual data
+*.parquet
+*.snappy
+*.avro
+*.orc
+sample_data/*.json
+!sample_data/sample_flights_template.json
+
+# Large JAR files - downloaded at runtime via --packages
+jars/
+*.jar
+
+# Temp files
+/tmp/
+temp/
+*.tmp
+*.temp
+EOF
