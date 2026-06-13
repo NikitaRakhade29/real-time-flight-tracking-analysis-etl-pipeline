@@ -99,10 +99,6 @@ Generates:
   
 <img width="1916" height="1046" alt="rds_sql_schema" src="https://github.com/user-attachments/assets/b3da32ae-2ab5-4ce5-a2ba-dd6f5f0a1aa8" />
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/f36617a9-2959-4a63-aa79-0fc2b5aca0da" />
-
-
-
 
 ### Dashboarding
 
