@@ -100,7 +100,6 @@ Generates:
 <img width="1916" height="1046" alt="rds_sql_schema" src="https://github.com/user-attachments/assets/b3da32ae-2ab5-4ce5-a2ba-dd6f5f0a1aa8" />
 
 
-
 ### Dashboarding
 
 Power BI dashboard provides:
@@ -124,23 +123,26 @@ flight-tracking/
 │   └── opensky_fetcher.py
 │
 ├── spark/
-│   ├── streaming_job.py
-│   ├── schemas.py
-│   └── transformations.py
+│   ├── spark_consumer.py
 │
-├── dashboards/
-│   └── powerbi.pbix
+├── infra/
+│   ├── aws
+|        └── iam_policy.json
+|        └── security_groups.md
+│   ├── kafka
+|          └── server.properties
+|   ├── rds
+|        └── schema.sql
+│   ├── s3
+|        └── s3_bucket.md
 │
-├── configs/
-│   ├── kafka_config.py
-│   ├── aws_config.py
-│   └── mysql_config.py
+├── tmp/checkpoints/
 │
-├── checkpoints/
-│
-├── docs/
+├── screenshots/
 │
 ├── requirements.txt
+|
+├── Architecture.png
 │
 └── README.md
 ```
@@ -318,12 +320,12 @@ Hosts:
 
 ### Instance Configuration
 
-Recommended:
+Recommended: Bare Minimum
 
 ```text
-t3.medium
-4 GB RAM
-2 vCPU
+t2.micro
+1 GB RAM
+1 vCPU
 ```
 
 For larger workloads:
