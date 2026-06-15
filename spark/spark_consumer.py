@@ -45,7 +45,7 @@ MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD")
 MYSQL_PORT=os.getenv("MYSQL_PORT")
 
 
-# SPARK SESSION
+# CREATE SPARK SESSION
 
 spark = (
     SparkSession.builder
